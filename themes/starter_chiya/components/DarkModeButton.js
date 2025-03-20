@@ -1,7 +1,11 @@
 import { useGlobal } from '@/lib/global';
 import { useRouter } from 'next/router';
+import CONFIG from '@/themes/starter_chiya/config'
 
 export const DarkModeButton = () => {
+  if (!CONFIG.STARTER_DARK_MODE_BUTTON_ENABLED) {
+    return null
+  }
   const { toggleDarkMode } = useGlobal()
   const router = useRouter()
   return <>
