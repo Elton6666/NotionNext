@@ -43,11 +43,11 @@ export const MenuItem = ({ link }) => {
           <div
             onMouseOver={() => setIsSubMenuOpen(true)}
             onMouseOut={() => setIsSubMenuOpen(false)}
-            className={`cursor-pointer relative px-8 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 ${
+            className={`cursor-pointer relative px-8 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-gray-200 lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 ${
               router.route === '/'
                 ? 'lg:text-white lg:group-hover:text-white'
                 : ''
-            } lg:group-hover:opacity-70 xl:ml-10`}>
+            } lg:group-hover:opacity-70 dark:group-hover:text-primary xl:ml-10`}>
             <span>
               {link?.icon && <i className={link.icon + ' mr-2 my-auto'} />}
               {link?.name}
@@ -66,7 +66,7 @@ export const MenuItem = ({ link }) => {
 
           {/* 子菜单 */}
           <div
-            className={`submenu dark:border-gray-600 relative left-0 top-full w-[250px] rounded-sm bg-white p-4 transition-all duration-300 dark:bg-dark-2 lg:absolute lg:shadow-lg ${
+            className={`submenu dark:border-gray-600 relative left-0 top-full w-[250px] rounded-sm bg-white p-4 transition-all duration-300 dark:bg-gray-900 dark:text-gray-200 lg:absolute lg:shadow-lg ${
               isSubMenuOpen
                 ? 'visible opacity-100 top-12'
                 : 'invisible opacity-0 top-10'

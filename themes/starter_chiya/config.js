@@ -26,12 +26,14 @@ const CONFIG = {
 
   // 顶部右侧导航暗流
   STARTER_NAV_BUTTONS_ENABLED: false, // 控制导航按钮是否显示
-  STARTER_DARK_MODE_BUTTON_ENABLED: true, // 控制日夜切换按钮是否显示
+
   STARTER_NAV_BUTTON_1_TEXT: 'Sign In',
   STARTER_NAV_BUTTON_1_URL: '/sign-in',
 
   STARTER_NAV_BUTTON_2_TEXT: 'Sign Up', 
   STARTER_NAV_BUTTON_2_URL: '/sign-up',
+
+  STARTER_DARK_MODE_BUTTON_ENABLED: true, // 控制日夜切换按钮是否显示
 
   // 特性区块
   STARTER_FEATURE_ENABLE: true, // 特性区块开关
