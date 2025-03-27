@@ -10,21 +10,22 @@ import Link from 'next/link'
 export const Hero = props => {
   const config = props?.NOTION_CONFIG || CONFIG
   const { siteInfo } = props
-
+  
   return (
     <>
       {/* <!-- ====== Hero Section Start --> */}
-      <div id='home' className='relative overflow-hidden bg-black pt-0'>
-        {/* 背景圖片 */}
-        <LazyImage 
-          id='header-cover'
-          src={siteInfo?.pageCover}
-          className={`absolute top-0 left-0 w-full h-full object-cover object-center opacity-70
-            ${CONFIG.HOME_NAV_BACKGROUND_IMG_FIXED ? 'fixed' : ''}`}
-        />
-
-        {/* 內容區域 */}
-        <div className='container relative z-10 pt-[120px] md:pt-[130px] lg:pt-[160px]'>
+      <div
+        id='home'
+        className='relative overflow-hidden bg-black pt-[120px] md:pt-[130px] lg:pt-[160px]'>
+        {/* 添加背景圖 */}
+        {siteInfo?.pageCover && (
+          <LazyImage 
+            src={siteInfo.pageCover}
+            className='absolute top-0 left-0 w-full h-full object-cover object-center opacity-70'
+          />
+        )}
+        
+        <div className='container relative z-10'>
           <div className='-mx-4 flex flex-wrap items-center'>
             <div className='w-full px-4'>
               <div
