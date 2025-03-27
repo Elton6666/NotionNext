@@ -14,8 +14,13 @@ export const MenuItem = ({ link }) => {
   // 管理子菜单的展开状态
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false)
 
-  const toggleSubMenu = () => {
-    setIsSubMenuOpen(prev => !prev) // 切换子菜单状态
+  // 鼠标悬停处理函数
+  const handleMouseEnter = () => {
+    setIsSubMenuOpen(true)
+  }
+
+  const handleMouseLeave = () => {
+    setIsSubMenuOpen(false)
   }
 
   return (
@@ -39,9 +44,13 @@ export const MenuItem = ({ link }) => {
 
       {/* 有子菜单的 MenuItem */}
       {hasSubMenu && (
-        <li className='submenu-item group relative whitespace-nowrap'>
+        <li 
+          className='submenu-item group relative whitespace-nowrap'
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          {/* 使用button而不是div，保持原有的结构 */}
           <button
-            onClick={toggleSubMenu}
             className={`cursor-pointer relative px-8 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 ${
               router.route === '/'
                 ? 'lg:text-white lg:group-hover:text-white'
@@ -53,7 +62,7 @@ export const MenuItem = ({ link }) => {
             </span>
 
             <svg
-              className='ml-2 fill-current'
+              className={`ml-2 fill-current transition-transform duration-300 ${isSubMenuOpen ? 'rotate-180' : ''}`}
               width='16'
               height='20'
               viewBox='0 0 16 20'
@@ -76,7 +85,6 @@ export const MenuItem = ({ link }) => {
                 href={sLink.href}
                 target={link?.target}
                 className='block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary'>
-                {/* 子菜单 SubMenuItem */}
                 <span className='text-md ml-2 whitespace-nowrap'>
                   {link?.icon && <i className={sLink.icon + ' mr-2 my-auto'} />}{' '}
                   {sLink.title}
