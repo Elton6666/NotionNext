@@ -25,6 +25,7 @@ const CONFIG = {
   STARTER_HERO_BANNER_IMAGE: '', // hero区下方的全宽图
 
   // 顶部右侧导航暗流
+  STARTER_NAV_BUTTONS_ENABLE: false, // 控制是否显示登录/注册按钮
   STARTER_NAV_BUTTON_1_TEXT: 'Sign In',
   STARTER_NAV_BUTTON_1_URL: '/sign-in',
 
