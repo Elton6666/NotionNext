@@ -17,16 +17,15 @@ export const Logo = props => {
   const logoWhite = siteConfig('STARTER_LOGO_WHITE')
   const logoNormal = siteConfig('STARTER_LOGO')
   const { isDarkMode } = useGlobal()
-  const [logo, setLogo] = useState(logoWhite)
-  const [logoTextColor, setLogoTextColor] = useState('text-white')
+  const [logo, setLogo] = useState(router.route === '/' ? logoWhite : logoNormal)
+  const [logoTextColor, setLogoTextColor] = useState(router.route === '/' ? 'text-white' : 'text-black')
 
   useEffect(() => {
     // 滚动监听
     const throttleMs = 200
     const navBarScrollListener = throttle(() => {
       const scrollY = window.scrollY
-      // 何时显示浅色或白底的logo
-      const homePageNavBar = router.route === '/' && scrollY < 10 // 在首页并且视窗在页面顶部
+      const homePageNavBar = router.route === '/' && scrollY < 10
 
       if (white || isDarkMode || homePageNavBar) {
         setLogo(logoWhite)
@@ -37,12 +36,13 @@ export const Logo = props => {
       }
     }, throttleMs)
 
+    // 立即执行一次以设置初始状态
     navBarScrollListener()
     window.addEventListener('scroll', navBarScrollListener)
     return () => {
       window.removeEventListener('scroll', navBarScrollListener)
     }
-  }, [isDarkMode, router])
+  }, [isDarkMode, router, white, logoWhite, logoNormal])
 
   return (
     <div className='w-60 max-w-full px-4'>
@@ -56,7 +56,7 @@ export const Logo = props => {
             }}
             src={logo}
             alt='logo'
-            className='header-logo mr-1 h-8'
+            className='header-logo mr-1 h-10'//修改logo大小
           />
         )}
         {/* logo文字 */}
