@@ -374,6 +374,12 @@ const CONFIG = {
 
   STARTER_POST_REDIRECT_ENABLE: true, // 默認開啟重定向
   STARTER_POST_REDIRECT_URL: 'https://blog.tangly1024.com', // 重定向域名
-  STARTER_NEWSLETTER: process.env.NEXT_PUBLIC_THEME_STARTER_NEWSLETTER || false // 是否开启邮件订阅 请先配置mailchimp功能 https://docs.tangly1024.com/article/notion-next-mailchimp
+  STARTER_NEWSLETTER: process.env.NEXT_PUBLIC_THEME_STARTER_NEWSLETTER || false, // 是否开启邮件订阅 请先配置mailchimp功能 https://docs.tangly1024.com/article/notion-next-mailchimp
+
+  // Hero背景相關配置
+  STARTER_HERO_BACKGROUND_ENABLE: true, // 是否啟用背景圖
+  STARTER_HERO_BACKGROUND_IMAGE: '', // 自定義背景圖，留空則使用Notion封面圖
+  STARTER_HERO_BACKGROUND_OPACITY: 0.7, // 背景圖透明度
+  STARTER_HERO_BACKGROUND_FIXED: false, // 背景圖是否固定
 }
 export default CONFIG

@@ -11,17 +11,24 @@ export const Hero = props => {
   const config = props?.NOTION_CONFIG || CONFIG
   const { siteInfo } = props
   
+  // 決定背景圖片來源
+  const backgroundImage = siteConfig('STARTER_HERO_BACKGROUND_IMAGE', null, config) || siteInfo?.pageCover
+  const backgroundEnabled = siteConfig('STARTER_HERO_BACKGROUND_ENABLE', true, config)
+  const backgroundOpacity = siteConfig('STARTER_HERO_BACKGROUND_OPACITY', 0.7, config)
+  const backgroundFixed = siteConfig('STARTER_HERO_BACKGROUND_FIXED', false, config)
+
   return (
     <>
       {/* <!-- ====== Hero Section Start --> */}
       <div
         id='home'
-        className='relative overflow-hidden bg-black pt-[120px] md:pt-[130px] lg:pt-[160px]'>
-        {/* 添加背景圖 */}
-        {siteInfo?.pageCover && (
+        className='relative overflow-hidden bg-primary pt-[120px] md:pt-[130px] lg:pt-[160px]'>
+        {/* 背景圖 */}
+        {backgroundEnabled && backgroundImage && (
           <LazyImage 
-            src={siteInfo.pageCover}
-            className='absolute top-0 left-0 w-full h-full object-cover object-center opacity-70'
+            src={backgroundImage}
+            className={`absolute top-0 left-0 w-full h-full object-cover object-center ${backgroundFixed ? 'fixed' : ''}`}
+            style={{ opacity: backgroundOpacity }}
           />
         )}
         
@@ -53,26 +60,14 @@ export const Hero = props => {
                   {siteConfig('STARTER_HERO_BUTTON_2_TEXT', null, config) && (
                     <li>
                       <Link
-                        href={siteConfig(
-                          'STARTER_HERO_BUTTON_2_URL',
-                          null,
-                          config
-                        )}
+                        href={siteConfig('STARTER_HERO_BUTTON_2_URL', null, config)}
                         target='_blank'
                         className='flex items-center rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark'
                         rel='noreferrer'>
-                        {siteConfig(
-                          'STARTER_HERO_BUTTON_2_ICON',
-                          null,
-                          config
-                        ) && (
+                        {siteConfig('STARTER_HERO_BUTTON_2_ICON', null, config) && (
                           <img
                             className='mr-4'
-                            src={siteConfig(
-                              'STARTER_HERO_BUTTON_2_ICON',
-                              null,
-                              config
-                            )}
+                            src={siteConfig('STARTER_HERO_BUTTON_2_ICON', null, config)}
                           />
                         )}
                         {siteConfig('STARTER_HERO_BUTTON_2_TEXT', null, config)}
@@ -92,11 +87,7 @@ export const Hero = props => {
                   <div className='mt-16'>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={siteConfig(
-                        'STARTER_HERO_PREVIEW_IMAGE',
-                        null,
-                        config
-                      )}
+                      src={siteConfig('STARTER_HERO_PREVIEW_IMAGE', null, config)}
                       alt={siteConfig('TITLE', null, config)}
                       title={siteConfig('TITLE', null, config)}
                       className='mx-auto max-w-full rounded-t-xl rounded-tr-xl'
@@ -122,11 +113,8 @@ export const Hero = props => {
           <LazyImage
             priority
             className='w-full'
-            src={siteConfig(
-              'STARTER_HERO_BANNER_IMAGE',
-              null,
-              config
-            )}></LazyImage>
+            src={siteConfig('STARTER_HERO_BANNER_IMAGE', null, config)}
+          />
         </div>
       )}
       {/* <!-- ====== Hero Section End --> */}
