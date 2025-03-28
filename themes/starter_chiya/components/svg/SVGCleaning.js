@@ -1,0 +1,18 @@
+export const SVGCleaning = () => {
+  return (
+    <svg 
+      version="1.1" 
+      id="Layer_1" 
+      xmlns="http://www.w3.org/2000/svg" 
+      x="0px" 
+      y="0px"
+      width="36"
+      height="36"
+      viewBox="0 0 2048 2048" 
+      enableBackground="new 0 0 2048 2048"
+      fill="currentColor"
+    >
+      <path d="M1792 384h-179V256h-128v128h-922V256H435v128H256v1408h1536V384zM384 384v-17h51v17H384zm1280 1280H384V512h128v128h128V512h768v128h128V512h128v1152zM768 768H640V640h128v128zm256 0H896V640h128v128zm256 0h-128V640h128v128zm256 0h-128V640h128v128zm-768 256H640V896h128v128zm256 0H896V896h128v128zm256 0h-128V896h128v128zm256 0h-128V896h128v128zm-768 256H640v-128h128v128zm256 0H896v-128h128v128zm256 0h-128v-128h128v128zm256 0h-128v-128h128v128zm-768 256H640v-128h128v128zm256 0H896v-128h128v128zm256 0h-128v-128h128v128zm256 0h-128v-128h128v128z" />
+    </svg>
+  )
+} 

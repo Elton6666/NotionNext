@@ -1,5 +1,5 @@
 import { siteConfig } from '@/lib/config'
-import { SVGDesign } from './svg/SVGDesign'
+import { SVGCleaning } from './svg/SVGCleaning'
 import { SVGEssential } from './svg/SVGEssential'
 import { SVGGifts } from './svg/SVGGifts'
 import { SVGTemplate } from './svg/SVGTemplate'
@@ -88,7 +88,7 @@ export const Features = () => {
               <div className='wow fadeInUp group mb-12' data-wow-delay='.2s'>
                 <div className='relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary'>
                   <span className='absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45'></span>
-                  <SVGDesign />
+                  <SVGCleaning />
                 </div>
                 <h4 className='mb-3 text-xl font-bold text-dark dark:text-white'>
                   {siteConfig('STARTER_FEATURE_3_TITLE_1')}
