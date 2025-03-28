@@ -1,17 +1,18 @@
 import * as React from "react";
-const SVGComponent = (props) => (
+
+export const SVGLogo = () => (
   <svg
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     x="0px"
     y="0px"
-    width="70px"
-    height="70px"
+    width="100%"
+    height="100%"
     viewBox="0 0 190 215"
     enableBackground="new 0 0 190 215"
     xmlSpace="preserve"
-    {...props}
+    preserveAspectRatio="xMidYMid meet"
   >
     <image
       id="image0"
@@ -23,4 +24,3 @@ const SVGComponent = (props) => (
     />
   </svg>
 );
-export default SVGComponent;
