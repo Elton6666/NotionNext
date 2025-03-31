@@ -1,265 +1,45 @@
 /**
- * 另一个落地页主题
+ * 另一個落地頁主題
  */
 const CONFIG = {
-  // 默认只展示Logo文字，如果设置了logo图片，会在文字左侧显示图标
-  STARTER_LOGO: '/images/starter_chiya/logo/ChiyaLogo.png', // 普通logo图片 示例：/images/starter/logo/logo.svg
-  STARTER_LOGO_WHITE: '/images/starter_chiya/logo/ChiyaLogo.png', // 透明底浅色logo 示例： /images/starter/logo/logo-white.svg
+  // 默認只展示Logo文字，如果設置了logo圖片，會在文字左側顯示圖標
+  STARTER_LOGO: '/images/starter_chiya/logo/ChiyaLogo.png', // 普通logo圖片 示例：/images/starter/logo/logo.svg
+  STARTER_LOGO_WHITE: '/images/starter_chiya/logo/ChiyaLogo.png', // 透明底淺色logo 示例： /images/starter/logo/logo-white.svg
 
-  // MENU ， 菜单部分不在此处配置，请在Notion数据库中添加MENU
+  // MENU ， 菜單部分不在此處配置，請在Notion數據庫中添加MENU
 
-  // 英雄区块导航
-  STARTER_HERO_ENABLE: true, // 开启英雄区
-  STARTER_HERO_TITLE_1: '开源且免费的基于 Notion 笔记的网站构建工具', // 英雄区文字
-  STARTER_HERO_TITLE_2: '通过笔记无感知地建站、成倍放大您的价值', // 英雄区文字
-  // 英雄区两个按钮，如果TEXT留空则隐藏按钮
-  STARTER_HERO_BUTTON_1_TEXT: '开始体验', // 英雄区按钮
+  // 英雄區塊導航
+  STARTER_HERO_ENABLE: true, // 開啟英雄區
+  // Hero背景相關配置
+  STARTER_HERO_BACKGROUND_ENABLE: true, // 是否啟用背景圖
+  STARTER_HERO_BACKGROUND_IMAGE: '', // 自定義背景圖，留空則使用Notion封面圖
+  STARTER_HERO_BACKGROUND_OPACITY: 0.7, // 背景圖透明度
+  STARTER_HERO_BACKGROUND_FIXED: false, // 背景圖是否固定
+  // 英雄區文字
+  STARTER_HERO_TITLE_1: '', // 英雄區主標題
+  STARTER_HERO_TITLE_2: '', // 英雄區副標題
+  // 英雄區兩個按鈕，如果TEXT留空則隱藏按鈕
+  STARTER_HERO_BUTTON_1_TEXT: '', // 英雄區按鈕
   STARTER_HERO_BUTTON_1_URL:
-    'https://docs.tangly1024.com/article/vercel-deploy-notion-next', // 英雄区按钮
-  STARTER_HERO_BUTTON_2_TEXT: '在Github上关注', // 英雄区按钮
-  STARTER_HERO_BUTTON_2_URL: 'https://github.com/tangly1024/NotionNext', // 英雄区按钮
-  STARTER_HERO_BUTTON_2_ICON: '/images/starter_chiya/github.svg', // 英雄区按钮2的图标，不需要则留空
+    'https://docs.tangly1024.com/article/vercel-deploy-notion-next', // 英雄區按鈕
+  STARTER_HERO_BUTTON_2_TEXT: '', // 英雄區按鈕
+  STARTER_HERO_BUTTON_2_URL: 'https://github.com/tangly1024/NotionNext', // 英雄區按鈕
+  STARTER_HERO_BUTTON_2_ICON: '/images/starter_chiya/github.svg', // 英雄區按鈕2的圖標，不需要則留空
 
-  // 英雄区配图，如需隐藏，改为空值即可 ''
-  STARTER_HERO_PREVIEW_IMAGE: '/images/starter_chiya/hero/hero-image.webp', // 产品预览图 ，默认读取public目录下图片
-  STARTER_HERO_BANNER_IMAGE: '', // hero区下方的全宽图
+  // 英雄區配圖，如需隱藏，改為空值即可 ''
+  STARTER_HERO_PREVIEW_IMAGE: '', // 產品預覽圖 ，默認讀取public目錄下圖片
+  STARTER_HERO_BANNER_IMAGE: '', // hero區下方的全寬圖
 
-  // 顶部右侧导航暗流
-  STARTER_NAV_BUTTONS_ENABLE: false, // 控制是否显示登录/注册按钮
+  // 頂部右側導航暗流
+  STARTER_NAV_BUTTONS_ENABLE: false, // 控制是否顯示登錄/註冊按鈕
   STARTER_NAV_BUTTON_1_TEXT: 'Sign In',
   STARTER_NAV_BUTTON_1_URL: '/sign-in',
 
   STARTER_NAV_BUTTON_2_TEXT: 'Sign Up',
   STARTER_NAV_BUTTON_2_URL: '/sign-up',
 
-  // 特性区块
-  STARTER_FEATURE_ENABLE: true, // 特性区块开关
-  STARTER_FEATURE_TITLE: '特性', // 特性
-  STARTER_FEATURE_TEXT_1: 'NotionNext的主要特性', // 特性
-  STARTER_FEATURE_TEXT_2:
-    'NotionNext的愿景是帮助您简单、无感知地稳定地搭建自己的网站，放大品牌的价值。 ', // 特性
-
-  STARTER_FEATURE_1_TITLE_1: '免费且开源', // 特性1
-  STARTER_FEATURE_1_TEXT_1: '项目源码在Github上完全开放共享，遵循MIT协议', // 特性1
-  STARTER_FEATURE_1_BUTTON_TEXT: '了解更多', // 特性1
-  STARTER_FEATURE_1_BUTTON_URL: 'https://github.com/tangly1024/NotionNext', // 特性1
-
-  STARTER_FEATURE_2_TITLE_1: '多种主题定制', // 特性2
-  STARTER_FEATURE_2_TEXT_1: '数十种主题,适用于不同场景，总有一款适合你', // 特性2
-  STARTER_FEATURE_2_BUTTON_TEXT: '了解更多', // 特性2
-  STARTER_FEATURE_2_BUTTON_URL:
-    'https://docs.tangly1024.com/article/notion-next-themes', // 特性2
-
-  STARTER_FEATURE_3_TITLE_1: '优秀的性能', // 特性3
-  STARTER_FEATURE_3_TEXT_1: '基于NextJS开发，更快的响应速度，更好的SEO', // 特性3
-  STARTER_FEATURE_3_BUTTON_TEXT: '了解更多', // 特性3
-  STARTER_FEATURE_3_BUTTON_URL: 'https://docs.tangly1024.com/article/next-js', // 特性3
-
-  STARTER_FEATURE_4_TITLE_1: '便捷的写作体验', // 特性4
-  STARTER_FEATURE_4_TEXT_1: '只需在Notion笔记中编修，自动同步到网站', // 特性4
-  STARTER_FEATURE_4_BUTTON_TEXT: '了解更多', // 特性4
-  STARTER_FEATURE_4_BUTTON_URL: 'https://docs.tangly1024.com/about', // 特性4
-
-  // 首页ABOUT区块
-  STARTER_ABOUT_ENABLE: true, // ABOUT区块开关
-  STARTER_ABOUT_TITLE: '一套轻量实用的建站解决方案',
-  STARTER_ABOUT_TEXT:
-    'NotionNext的愿景是帮助非技术人员的小白，最低成本、最快速地搭建自己的网站，帮助您将自己的产品与故事高效地传达给世界。 <br /> <br /> 功能强大的Notion笔记，简单快速的Vercel托管平台，组成一个简单的网站',
-  STARTER_ABOUT_BUTTON_TEXT: '了解更多',
-  STARTER_ABOUT_BUTTON_URL: 'https://docs.tangly1024.com/about',
-  STARTER_ABOUT_IMAGE_1: '/images/starter/about/about-image-01.jpg',
-  STARTER_ABOUT_IMAGE_2: '/images/starter/about/about-image-02.jpg',
-  STARTER_ABOUT_TIPS_1: '7000+',
-  STARTER_ABOUT_TIPS_2: '博客站点',
-  STARTER_ABOUT_TIPS_3: '正在线上运行',
-
-  // 首页价格区块
-  STARTER_PRICING_ENABLE: true, // 价格区块开关
-  STARTER_PRICING_TITLE: '价格表',
-  STARTER_PRICING_TEXT_1: '很棒的定价计划',
-  STARTER_PRICING_TEXT_2:
-    '我们制定了灵活的付费模式，您可以按需选择。（NotionNext免费开源，这里仅演示产品订阅付费功能，请勿下单购买！）',
-
-  STARTER_PRICING_1_TITLE: '入门版',
-  STARTER_PRICING_1_PRICE: '19.9',
-  STARTER_PRICING_1_PRICE_CURRENCY: '$',
-  STARTER_PRICING_1_PRICE_PERIOD: '每月',
-  STARTER_PRICING_1_HEADER: '功能点',
-  STARTER_PRICING_1_FEATURES: '所有的主题,免费更新,帮助手册', // 英文逗号隔开
-  STARTER_PRICING_1_BUTTON_TEXT: '立即购买',
-  STARTER_PRICING_1_BUTTON_URL:
-    'https://tangly1024.lemonsqueezy.com/checkout/buy/c1a38a65-362e-44c5-8065-733fee39eb54',
-
-  STARTER_PRICING_2_TAG: '推荐',
-  STARTER_PRICING_2_TITLE: '基础版',
-  STARTER_PRICING_2_PRICE: '39.9',
-  STARTER_PRICING_2_PRICE_CURRENCY: '$',
-  STARTER_PRICING_2_PRICE_PERIOD: '每月',
-  STARTER_PRICING_2_HEADER: '功能点',
-  STARTER_PRICING_2_FEATURES: '包含入门版,项目源码,内部社群,技术咨询,SEO优化', // 英文逗号隔开
-  STARTER_PRICING_2_BUTTON_TEXT: '立即购买',
-  STARTER_PRICING_2_BUTTON_URL:
-    'https://tangly1024.lemonsqueezy.com/checkout/buy/590ad70a-c3b7-4caf-94ec-9ca27bde06d4',
-
-  STARTER_PRICING_3_TITLE: '高级版',
-  STARTER_PRICING_3_PRICE: '59.9',
-  STARTER_PRICING_3_PRICE_CURRENCY: '$',
-  STARTER_PRICING_3_PRICE_PERIOD: '每月',
-  STARTER_PRICING_3_HEADER: '功能点',
-  STARTER_PRICING_3_FEATURES: '包含基础版,功能定制开发', // 英文逗号隔开
-  STARTER_PRICING_3_BUTTON_TEXT: '立即购买',
-  STARTER_PRICING_3_BUTTON_URL:
-    'https://tangly1024.lemonsqueezy.com/checkout/buy/df924d66-09dc-42a4-a632-a6b0c5cc4f28',
-
-  // 首页用户测评区块
-  STARTER_TESTIMONIALS_ENABLE: true, // 测评区块开关
-  STARTER_TESTIMONIALS_TITLE: '用户反馈',
-  STARTER_TESTIMONIALS_TEXT_1: '我们的用户怎么说',
-  STARTER_TESTIMONIALS_TEXT_2:
-    '数千位站长选择用NotionNext搭建他们的网站,通过帮助手册、交流社群以及技术咨询，大家成功上线了自己的网站',
-  STARTER_TESTIMONIALS_STAR_ICON: '/images/starter/testimonials/icon-star.svg', // 评分图标
-
-  // 这里不支持CONFIG和环境变量，需要一一修改此处代码。
-  STARTER_TESTIMONIALS_ITEMS: [
-    {
-      STARTER_TESTIMONIALS_ITEM_TEXT:
-        '感谢大佬的方法。之前尝试过Super、Potion等国外的第三方平台，实现效果一般，个性化程度远不如这个方法，已经用起来了！ ',
-      STARTER_TESTIMONIALS_ITEM_AVATAR:
-        'https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F22de3fcb-d90d-4271-bc01-f815f476122b%2F4FE0A0C0-E487-4C74-BF8E-6F01A27461B8-14186-000008094BC289A6.jpg?table=collection&id=a320a2cc-6ebe-4a8d-95cc-ea94e63bced9&width=200',
-      STARTER_TESTIMONIALS_ITEM_NICKNAME: 'Ryan_G',
-      STARTER_TESTIMONIALS_ITEM_DESCRIPTION: 'Ryan`Log 站长',
-      STARTER_TESTIMONIALS_ITEM_URL: 'https://blog.gaoran.xyz/'
-    },
-    {
-      STARTER_TESTIMONIALS_ITEM_TEXT:
-        '很喜欢这个主题，本代码小白用三天台风假期搭建出来了，还根据大佬的教程弄了自定义域名，十分感谢，已请喝咖啡~',
-      STARTER_TESTIMONIALS_ITEM_AVATAR:
-        'https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0d33d169-f932-41ff-ac6b-88a923c08e02%2F%25E5%25A4%25B4%25E5%2583%258F.jfif?table=collection&id=7787658d-d5c0-4f34-8e32-60c523dfaba3&width=400',
-      STARTER_TESTIMONIALS_ITEM_NICKNAME: 'Asenkits',
-      STARTER_TESTIMONIALS_ITEM_DESCRIPTION: '阿森的百宝袋 站长',
-      STARTER_TESTIMONIALS_ITEM_URL: 'https://asenkits.top/'
-    },
-    {
-      STARTER_TESTIMONIALS_ITEM_TEXT:
-        '呜呜呜，经过一个下午的努力，终于把博客部署好啦，非常感谢Tangly1024大佬的框架和教程，这是我有生之年用过的最好用的博客框架┭┮﹏┭┮。从今之后，我就可以在自己的博客里bb啦，( •̀ ω •́ )y ',
-      STARTER_TESTIMONIALS_ITEM_AVATAR:
-        'https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F6c096b44-beb9-48ee-8f92-1efdde47f3a3%2F338962f1-d352-49c7-9a1b-746e35a7005c%2Fhf.png?table=block&id=ce5a48a9-d77a-4843-a3d9-a78cd4f794ce&spaceId=6c096b44-beb9-48ee-8f92-1efdde47f3a3&width=100&userId=27074aef-7216-41ed-baef-d9b53addd870&cache=v2',
-      STARTER_TESTIMONIALS_ITEM_NICKNAME: 'DWIND',
-      STARTER_TESTIMONIALS_ITEM_DESCRIPTION: '且听风吟 站长',
-      STARTER_TESTIMONIALS_ITEM_URL: 'https://www.dwind.top/'
-    },
-    {
-      STARTER_TESTIMONIALS_ITEM_TEXT:
-        '感谢提供这么好的项目哈哈 之前一直不知道怎么部署(别的项目好难好复杂)这个相对非常简单 新手非常友好哦',
-      STARTER_TESTIMONIALS_ITEM_AVATAR:
-        'https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd52f6766-3e32-4c3d-8529-46e1f214360f%2Ffavicon.svg?table=collection&id=7d76aad5-a2c4-4d9a-887c-c7913fae4eed&width=400',
-      STARTER_TESTIMONIALS_ITEM_NICKNAME: '迪升disheng ',
-      STARTER_TESTIMONIALS_ITEM_DESCRIPTION: 'AI资源分享 Blog',
-      STARTER_TESTIMONIALS_ITEM_URL: 'https://blog.disheng.org/'
-    },
-    {
-      STARTER_TESTIMONIALS_ITEM_TEXT:
-        '灰常感谢大佬的博客项目，能将博客和notion结合起来，这一直是我挺期待的博客模式。',
-      STARTER_TESTIMONIALS_ITEM_AVATAR:
-        'https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fafb21381-f51b-4fd0-9998-800dbeb64dbe%2Favatar.png?table=block&id=195935d2-0d8d-49fc-bd81-1db42ee50840&spaceId=6c096b44-beb9-48ee-8f92-1efdde47f3a3&width=100&userId=27074aef-7216-41ed-baef-d9b53addd870&cache=v2',
-      STARTER_TESTIMONIALS_ITEM_NICKNAME: 'AnJhon',
-      STARTER_TESTIMONIALS_ITEM_DESCRIPTION: 'Anjhon`s Blog 站长',
-      STARTER_TESTIMONIALS_ITEM_URL: 'https://www.anjhon.top'
-    },
-    {
-      STARTER_TESTIMONIALS_ITEM_TEXT: '用好久了，太感谢了',
-      STARTER_TESTIMONIALS_ITEM_AVATAR:
-        'https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe4f391d7-7d65-4c05-a82c-c6e2c40f06e4%2Fa2a7641a26b367608c6ef28ce9b7e983_(2).png?table=block&id=a386eb0e-4c07-4b18-9ece-bba4e79ce21c&spaceId=6c096b44-beb9-48ee-8f92-1efdde47f3a3&width=100&userId=27074aef-7216-41ed-baef-d9b53addd870&cache=v2',
-      STARTER_TESTIMONIALS_ITEM_NICKNAME: 'LUCEN',
-      STARTER_TESTIMONIALS_ITEM_DESCRIPTION: 'LUCEN考验辅导 站长',
-      STARTER_TESTIMONIALS_ITEM_URL: 'https://www.lucenczz.top/'
-    }
-  ],
-
-  //   FAQ 常见问题模块
-  STARTER_FAQ_ENABLE: true, // 常见问题模块开关
-  STARTER_FAQ_TITLE: '常见问题解答',
-  STARTER_FAQ_TEXT_1: '有任何问题吗？请看这里',
-  STARTER_FAQ_TEXT_2: '我们收集了常见的用户疑问',
-
-  STARTER_FAQ_1_QUESTION: 'NotionNext有帮助文档吗？',
-  STARTER_FAQ_1_ANSWER:
-    'NotionNext提供了<a href="https://docs.tangly1024.com/about" className="underline">帮助文档</a>，操作<a href="https://www.bilibili.com/video/BV1fM4y1L7Qi/" className="underline">演示视频</a>，以及<a href="https://docs.tangly1024.com/article/chat-community" className="underline">交流社群</a>来协助您完成网站的搭建部署',
-
-  STARTER_FAQ_2_QUESTION: '部署后要如何编写文章？',
-  STARTER_FAQ_2_ANSWER:
-    '您可以在Notion中之间添加或修改类型为Post的页面，内容将被实时同步在站点中，详情参考<a className="underline" href="https://docs.tangly1024.com/article/start-to-write">《帮助文档》</a>',
-
-  STARTER_FAQ_3_QUESTION: '站点部署失败，更新失败？',
-  STARTER_FAQ_3_ANSWER:
-    '通常是配置修改错误导致，请检查配置或者重试操作步骤，或者通过Vercel后台的Deployments中找到错误日志，并向网友求助',
-
-  STARTER_FAQ_4_QUESTION: '文章没有实时同步？',
-  STARTER_FAQ_4_ANSWER:
-    '先检查Notion_Page_ID是否正确配置，其次由于博客的每个页面都有独立缓存，刷新网页后即可解决',
-
-  // 团队成员区块
-  STARTER_TEAM_ENABLE: true, // 团队成员区块开关
-  STARTER_TEAM_TITLE: '团队成员',
-  STARTER_TEAM_TEXT_1: '我们的开发者团队',
-  STARTER_TEAM_TEXT_2:
-    'NotionNext 由众多开源技术爱好者们共同合作完成，感谢每一位<a className="underline" href="https://github.com/tangly1024/NotionNext/graphs/contributors">贡献者</a>',
-
-  // 这里不支持CONFIG和环境变量，需要一一修改此处代码。
-  STARTER_TEAM_ITEMS: [
-    {
-      STARTER_TEAM_ITEM_AVATAR:
-        'https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa06c61bb-980e-4180-bc18-c15f92c78bb4%2Ftangly1024.jpg?table=collection&id=8e7acf17-de09-4fa1-abde-b5b80ad4a813&t=8e7acf17-de09-4fa1-abde-b5b80ad4a813&width=100&cache=v2',
-      STARTER_TEAM_ITEM_NICKNAME: 'Tangly',
-      STARTER_TEAM_ITEM_DESCRIPTION: 'Developer'
-    },
-    {
-      STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/team-01.png',
-      STARTER_TEAM_ITEM_NICKNAME: 'Melissa Tatcher',
-      STARTER_TEAM_ITEM_DESCRIPTION: 'Marketing Expert'
-    },
-    {
-      STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/team-02.png',
-      STARTER_TEAM_ITEM_NICKNAME: 'Stuard Ferrel',
-      STARTER_TEAM_ITEM_DESCRIPTION: 'Digital Marketer'
-    },
-    {
-      STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/team-03.png',
-      STARTER_TEAM_ITEM_NICKNAME: 'Eva Hudson',
-      STARTER_TEAM_ITEM_DESCRIPTION: 'Creative Designer'
-    }
-  ],
-
-  // 博客文章区块
-  STARTER_BLOG_ENABLE: true, // 首页博文区块开关
-  STARTER_BLOG_TITLE: '我们的博客',
-  STARTER_BLOG_COUNT: 3, // 首页博文区块默认展示前3篇文章
-  STARTER_BLOG_TEXT_1: '最近的新闻',
-  STARTER_BLOG_TEXT_2:
-    '这里会发布一些关于NotionNext的最新动态，包括新的动向、新的未来计划，以及新功能的特性',
-
-  // 联系模块
-  STARTER_CONTACT_ENABLE: true, // 联系模块开关
-  STARTER_CONTACT_TITLE: '联系我们',
-  STARTER_CONTACT_TEXT: '告诉我们您遇到的问题',
-  STARTER_CONTACT_LOCATION_TITLE: '我们的位置',
-  STARTER_CONTACT_LOCATION_TEXT: '中国，福建',
-  STARTER_CONTACT_EMAIL_TITLE: '我们如何帮助您？',
-  STARTER_CONTACT_EMAIL_TEXT: 'mail@tangly1024.com',
-
-  // 嵌入外部表单
-  STARTER_CONTACT_MSG_EXTERNAL_URL: 'https://noteforms.com/forms/yfctc7', // 基于NoteForm创建，将留言数据存在Notion中
-  //   自定义留言表单，以下几个配置暂时废弃
-  //   STARTER_CONTACT_MSG_TITLE: '向我们留言',
-  //   STARTER_CONTACT_MSG_NAME: '姓名',
-  //   STARTER_CONTACT_MSG_EMAIL: '邮箱地址',
-  //   STARTER_CONTACT_MSG_PHONE: '联系电话',
-  //   STARTER_CONTACT_MSG_TEXT: '消息内容',
-  //   STARTER_CONTACT_MSG_SEND: '发送消息',
-  //   STARTER_CONTACT_MSG_THANKS: '感谢您的留言',
-
-  // 合作伙伴的图标
-  STARTER_BRANDS_ENABLE: true, // 合作伙伴开关
+  // 合作伙伴的圖標
+  STARTER_BRANDS_ENABLE: false, // 合作伙伴開關
   STARTER_BRANDS: [
     {
       IMAGE: '/images/starter/brands/graygrids.svg',
@@ -293,21 +73,247 @@ const CONFIG = {
     }
   ],
 
-  STARTER_FOOTER_SLOGAN: '我们通过技术为品牌和公司创造数字体验。',
+  // 特性區塊
+  STARTER_FEATURE_ENABLE: true, // 特性區塊開關
+  STARTER_FEATURE_TITLE: '啟雅工程企業股份有限公司', // 特性
+  STARTER_FEATURE_TEXT_1: '主要服務項目', // 特性
+  STARTER_FEATURE_TEXT_2: '以深耕行業超過30年的經驗，為您解決問題。 ', // 特性
 
-  // 页脚三列菜单组
+  STARTER_FEATURE_1_TITLE_1: '水刀清洗', // 特性1
+  STARTER_FEATURE_1_TEXT_1: '項目細節說明', // 特性1說明
+  STARTER_FEATURE_1_BUTTON_TEXT: '瞭解更多', // 特性1按鈕
+  STARTER_FEATURE_1_BUTTON_URL: 'https://github.com/tangly1024/NotionNext', // 特性1連結
+
+  STARTER_FEATURE_2_TITLE_1: '水刀切割', // 特性2
+  STARTER_FEATURE_2_TEXT_1: '項目細節說明', // 特性2說明
+  STARTER_FEATURE_2_BUTTON_TEXT: '瞭解更多', // 特性2按鈕
+  STARTER_FEATURE_2_BUTTON_URL: 'https://docs.tangly1024.com/article/notion-next-themes', // 特性2連結
+
+  STARTER_FEATURE_3_TITLE_1: '免入槽水刀清洗', // 特性3
+  STARTER_FEATURE_3_TEXT_1: '項目細節說明', // 特性3說明
+  STARTER_FEATURE_3_BUTTON_TEXT: '瞭解更多', // 特性3按鈕
+  STARTER_FEATURE_3_BUTTON_URL: 'https://docs.tangly1024.com/article/next-js', // 特性3連結
+
+  STARTER_FEATURE_4_TITLE_1: '換熱器整修', // 特性4
+  STARTER_FEATURE_4_TEXT_1: '項目細節說明', // 特性4說明
+  STARTER_FEATURE_4_BUTTON_TEXT: '瞭解更多', // 特性4按鈕
+  STARTER_FEATURE_4_BUTTON_URL: 'https://docs.tangly1024.com/about', // 特性4連結
+
+  // 首頁ABOUT區塊
+  STARTER_ABOUT_ENABLE: true, // ABOUT區塊開關
+  STARTER_ABOUT_TITLE: '關於我們',
+  STARTER_ABOUT_TEXT:
+    '我們是一家成立超過30年的水刀工程公司，專注於設備管路的清洗和不動火切割，服務項目涵蓋換熱器維護相關工程，如現場法蘭修復及管束抽裝等。 <br /> <br />我們提供卓越的技術和豐富的經驗，為客戶提供全方位的解決方案。',
+  STARTER_ABOUT_BUTTON_TEXT: '瞭解更多',
+  STARTER_ABOUT_BUTTON_URL: 'https://docs.tangly1024.com/about',
+  STARTER_ABOUT_IMAGE_1: '/images/starter/about/about-image-01.jpg',
+  STARTER_ABOUT_IMAGE_2: '/images/starter/about/about-image-02.jpg',
+  STARTER_ABOUT_TIPS_1: '7000+',
+  STARTER_ABOUT_TIPS_2: '博客站點',
+  STARTER_ABOUT_TIPS_3: '正在線上運行',
+
+  // 首頁價格區塊
+  STARTER_PRICING_ENABLE: false, // 價格區塊開關
+  STARTER_PRICING_TITLE: '價格表',
+  STARTER_PRICING_TEXT_1: '很棒的定價計劃',
+  STARTER_PRICING_TEXT_2:
+    '我們制定了靈活的付費模式，您可以按需選擇。（NotionNext免費開源，這裡僅演示產品訂閱付費功能，請勿下單購買！）',
+
+  STARTER_PRICING_1_TITLE: '入門版',
+  STARTER_PRICING_1_PRICE: '19.9',
+  STARTER_PRICING_1_PRICE_CURRENCY: '$',
+  STARTER_PRICING_1_PRICE_PERIOD: '每月',
+  STARTER_PRICING_1_HEADER: '功能點',
+  STARTER_PRICING_1_FEATURES: '所有的主題,免費更新,幫助手冊', // 英文逗號隔開
+  STARTER_PRICING_1_BUTTON_TEXT: '立即購買',
+  STARTER_PRICING_1_BUTTON_URL:
+    'https://tangly1024.lemonsqueezy.com/checkout/buy/c1a38a65-362e-44c5-8065-733fee39eb54',
+
+  STARTER_PRICING_2_TAG: '推薦',
+  STARTER_PRICING_2_TITLE: '基礎版',
+  STARTER_PRICING_2_PRICE: '39.9',
+  STARTER_PRICING_2_PRICE_CURRENCY: '$',
+  STARTER_PRICING_2_PRICE_PERIOD: '每月',
+  STARTER_PRICING_2_HEADER: '功能點',
+  STARTER_PRICING_2_FEATURES: '包含入門版,項目源碼,內部社群,技術諮詢,SEO優化', // 英文逗號隔開
+  STARTER_PRICING_2_BUTTON_TEXT: '立即購買',
+  STARTER_PRICING_2_BUTTON_URL:
+    'https://tangly1024.lemonsqueezy.com/checkout/buy/590ad70a-c3b7-4caf-94ec-9ca27bde06d4',
+
+  STARTER_PRICING_3_TITLE: '高級版',
+  STARTER_PRICING_3_PRICE: '59.9',
+  STARTER_PRICING_3_PRICE_CURRENCY: '$',
+  STARTER_PRICING_3_PRICE_PERIOD: '每月',
+  STARTER_PRICING_3_HEADER: '功能點',
+  STARTER_PRICING_3_FEATURES: '包含基礎版,功能定制開發', // 英文逗號隔開
+  STARTER_PRICING_3_BUTTON_TEXT: '立即購買',
+  STARTER_PRICING_3_BUTTON_URL:
+    'https://tangly1024.lemonsqueezy.com/checkout/buy/df924d66-09dc-42a4-a632-a6b0c5cc4f28',
+
+  // 首頁用戶測評區塊
+  STARTER_TESTIMONIALS_ENABLE: false, // 測評區塊開關
+  STARTER_TESTIMONIALS_TITLE: '用戶反饋',
+  STARTER_TESTIMONIALS_TEXT_1: '我們的用戶怎麼說',
+  STARTER_TESTIMONIALS_TEXT_2:
+    '數千位站長選擇用NotionNext搭建他們的網站,通過幫助手冊、交流社群以及技術諮詢，大家成功上線了自己的網站',
+  STARTER_TESTIMONIALS_STAR_ICON: '/images/starter/testimonials/icon-star.svg', // 評分圖標
+
+  // 這裡不支持CONFIG和環境變量，需要一一修改此處代碼。
+  STARTER_TESTIMONIALS_ITEMS: [
+    {
+      STARTER_TESTIMONIALS_ITEM_TEXT:
+        '感謝大佬的方法。之前嘗試過Super、Potion等國外的第三方平台，實現效果一般，個性化程度遠不如這個方法，已經用起來了！ ',
+      STARTER_TESTIMONIALS_ITEM_AVATAR:
+        'https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F22de3fcb-d90d-4271-bc01-f815f476122b%2F4FE0A0C0-E487-4C74-BF8E-6F01A27461B8-14186-000008094BC289A6.jpg?table=collection&id=a320a2cc-6ebe-4a8d-95cc-ea94e63bced9&width=200',
+      STARTER_TESTIMONIALS_ITEM_NICKNAME: 'Ryan_G',
+      STARTER_TESTIMONIALS_ITEM_DESCRIPTION: 'Ryan`Log 站長',
+      STARTER_TESTIMONIALS_ITEM_URL: 'https://blog.gaoran.xyz/'
+    },
+    {
+      STARTER_TESTIMONIALS_ITEM_TEXT:
+        '很喜歡這個主題，本代碼小白用三天颱風假期搭建出來了，還根據大佬的教程弄了自定義域名，十分感謝，已請喝咖啡~',
+      STARTER_TESTIMONIALS_ITEM_AVATAR:
+        'https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0d33d169-f932-41ff-ac6b-88a923c08e02%2F%25E5%25A4%25B4%25E5%2583%258F.jfif?table=collection&id=7787658d-d5c0-4f34-8e32-60c523dfaba3&width=400',
+      STARTER_TESTIMONIALS_ITEM_NICKNAME: 'Asenkits',
+      STARTER_TESTIMONIALS_ITEM_DESCRIPTION: '阿森的百寶袋 站長',
+      STARTER_TESTIMONIALS_ITEM_URL: 'https://asenkits.top/'
+    },
+    {
+      STARTER_TESTIMONIALS_ITEM_TEXT:
+        '嗚嗚嗚，經過一個下午的努力，終於把博客部署好啦，非常感謝Tangly1024大佬的框架和教程，這是有生之年用過的最好用的博客框架┭┮﹏┭┮。從今之後，我就可以在自己的博客裡bb啦，( •̀ ω •́ )y ',
+      STARTER_TESTIMONIALS_ITEM_AVATAR:
+        'https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F6c096b44-beb9-48ee-8f92-1efdde47f3a3%2F338962f1-d352-49c7-9a1b-746e35a7005c%2Fhf.png?table=block&id=ce5a48a9-d77a-4843-a3d9-a78cd4f794ce&spaceId=6c096b44-beb9-48ee-8f92-1efdde47f3a3&width=100&userId=27074aef-7216-41ed-baef-d9b53addd870&cache=v2',
+      STARTER_TESTIMONIALS_ITEM_NICKNAME: 'DWIND',
+      STARTER_TESTIMONIALS_ITEM_DESCRIPTION: '且聽風吟 站長',
+      STARTER_TESTIMONIALS_ITEM_URL: 'https://www.dwind.top/'
+    },
+    {
+      STARTER_TESTIMONIALS_ITEM_TEXT:
+        '感謝提供這麼好的項目哈哈 之前一直不知道怎麼部署(別的項目好難好複雜)這個相對非常簡單 新手非常友好哦',
+      STARTER_TESTIMONIALS_ITEM_AVATAR:
+        'https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd52f6766-3e32-4c3d-8529-46e1f214360f%2Ffavicon.svg?table=collection&id=7d76aad5-a2c4-4d9a-887c-c7913fae4eed&width=400',
+      STARTER_TESTIMONIALS_ITEM_NICKNAME: '迪升disheng ',
+      STARTER_TESTIMONIALS_ITEM_DESCRIPTION: 'AI資源分享 Blog',
+      STARTER_TESTIMONIALS_ITEM_URL: 'https://blog.disheng.org/'
+    },
+    {
+      STARTER_TESTIMONIALS_ITEM_TEXT:
+        '灰常感謝大佬的博客項目，能將博客和notion結合起來，這一直是我挺期待的博客模式。',
+      STARTER_TESTIMONIALS_ITEM_AVATAR:
+        'https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fafb21381-f51b-4fd0-9998-800dbeb64dbe%2Favatar.png?table=block&id=195935d2-0d8d-49fc-bd81-1db42ee50840&spaceId=6c096b44-beb9-48ee-8f92-1efdde47f3a3&width=100&userId=27074aef-7216-41ed-baef-d9b53addd870&cache=v2',
+      STARTER_TESTIMONIALS_ITEM_NICKNAME: 'AnJhon',
+      STARTER_TESTIMONIALS_ITEM_DESCRIPTION: 'Anjhon`s Blog 站長',
+      STARTER_TESTIMONIALS_ITEM_URL: 'https://www.anjhon.top'
+    },
+    {
+      STARTER_TESTIMONIALS_ITEM_TEXT: '用好久了，太感謝了',
+      STARTER_TESTIMONIALS_ITEM_AVATAR:
+        'https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe4f391d7-7d65-4c05-a82c-c6e2c40f06e4%2Fa2a7641a26b367608c6ef28ce9b7e983_(2).png?table=block&id=a386eb0e-4c07-4b18-9ece-bba4e79ce21c&spaceId=6c096b44-beb9-48ee-8f92-1efdde47f3a3&width=100&userId=27074aef-7216-41ed-baef-d9b53addd870&cache=v2',
+      STARTER_TESTIMONIALS_ITEM_NICKNAME: 'LUCEN',
+      STARTER_TESTIMONIALS_ITEM_DESCRIPTION: 'LUCEN考驗輔導 站長',
+      STARTER_TESTIMONIALS_ITEM_URL: 'https://www.lucenczz.top/'
+    }
+  ],
+
+  //   FAQ 常見問題模塊
+  STARTER_FAQ_ENABLE: true, // 常見問題模塊開關
+  STARTER_FAQ_TITLE: '常見問題解答',
+  STARTER_FAQ_TEXT_1: '有任何問題嗎？請看這裡',
+  STARTER_FAQ_TEXT_2: '我們收集了常見的用戶疑問',
+
+  STARTER_FAQ_1_QUESTION: '什麼是水刀?',
+  STARTER_FAQ_1_ANSWER:
+    '問題解答(HTML格式)',
+
+  STARTER_FAQ_2_QUESTION: '水刀能做什麼?',
+  STARTER_FAQ_2_ANSWER:
+    '問題解答(HTML格式)',
+
+  STARTER_FAQ_3_QUESTION: '壓力這麼大會不會搞壞設備?',
+  STARTER_FAQ_3_ANSWER:
+    '問題解答(HTML格式)',
+
+  STARTER_FAQ_4_QUESTION: '問題4',
+  STARTER_FAQ_4_ANSWER:
+    '問題解答(HTML格式)',
+
+  // 團隊成員區塊
+  STARTER_TEAM_ENABLE: false, // 團隊成員區塊開關
+  STARTER_TEAM_TITLE: '團隊成員',
+  STARTER_TEAM_TEXT_1: '我們的開發者團隊',
+  STARTER_TEAM_TEXT_2:
+    'NotionNext 由眾多開源技術愛好者們共同合作完成，感謝每一位<a className="underline" href="https://github.com/tangly1024/NotionNext/graphs/contributors">貢獻者</a>',
+
+  // 這裡不支持CONFIG和環境變量，需要一一修改此處代碼。
+  STARTER_TEAM_ITEMS: [
+    {
+      STARTER_TEAM_ITEM_AVATAR:
+        'https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa06c61bb-980e-4180-bc18-c15f92c78bb4%2Ftangly1024.jpg?table=collection&id=8e7acf17-de09-4fa1-abde-b5b80ad4a813&t=8e7acf17-de09-4fa1-abde-b5b80ad4a813&width=100&cache=v2',
+      STARTER_TEAM_ITEM_NICKNAME: 'Tangly',
+      STARTER_TEAM_ITEM_DESCRIPTION: 'Developer'
+    },
+    {
+      STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/team-01.png',
+      STARTER_TEAM_ITEM_NICKNAME: 'Melissa Tatcher',
+      STARTER_TEAM_ITEM_DESCRIPTION: 'Marketing Expert'
+    },
+    {
+      STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/team-02.png',
+      STARTER_TEAM_ITEM_NICKNAME: 'Stuard Ferrel',
+      STARTER_TEAM_ITEM_DESCRIPTION: 'Digital Marketer'
+    },
+    {
+      STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/team-03.png',
+      STARTER_TEAM_ITEM_NICKNAME: 'Eva Hudson',
+      STARTER_TEAM_ITEM_DESCRIPTION: 'Creative Designer'
+    }
+  ],
+
+  // 博客文章區塊
+  STARTER_BLOG_ENABLE: true, // 首頁博文區塊開關
+  STARTER_BLOG_TITLE: '我們的博客',
+  STARTER_BLOG_COUNT: 3, // 首頁博文區塊默認展示前3篇文章
+  STARTER_BLOG_TEXT_1: '最近的新聞',
+  STARTER_BLOG_TEXT_2:
+    '這裡會發布一些關於NotionNext的最新動態，包括新的動向、新的未來計劃，以及新功能的特性',
+
+  // 聯繫模塊
+  STARTER_CONTACT_ENABLE: true, // 聯繫模塊開關
+  STARTER_CONTACT_TITLE: '聯繫我們',
+  STARTER_CONTACT_TEXT: '告訴我們您遇到的問題',
+  STARTER_CONTACT_LOCATION_TITLE: '我們的位置',
+  STARTER_CONTACT_LOCATION_TEXT: '高雄、雲林',
+  STARTER_CONTACT_EMAIL_TITLE: '我們如何幫助您？',
+  STARTER_CONTACT_EMAIL_TEXT: 'chiya.n20218@msa.hinet.net',
+
+  // 嵌入外部表單
+  STARTER_CONTACT_MSG_EXTERNAL_URL: 'https://noteforms.com/forms/yfctc7', // 基於NoteForm創建，將留言數據存在Notion中
+  //   自定義留言表單，以下幾個配置暫時廢棄
+  //   STARTER_CONTACT_MSG_TITLE: '向我們留言',
+  //   STARTER_CONTACT_MSG_NAME: '姓名',
+  //   STARTER_CONTACT_MSG_EMAIL: '郵箱地址',
+  //   STARTER_CONTACT_MSG_PHONE: '聯繫電話',
+  //   STARTER_CONTACT_MSG_TEXT: '消息內容',
+  //   STARTER_CONTACT_MSG_SEND: '發送消息',
+  //   STARTER_CONTACT_MSG_THANKS: '感謝您的留言',
+
+
+
+  STARTER_FOOTER_SLOGAN: '我們通過技術為品牌和公司創造數字體驗。',
+
+  // 頁腳三列菜單組
   STARTER_FOOTER_LINK_GROUP: [
     {
-      TITLE: '关于我们',
+      TITLE: '關於我們',
       LINK_GROUP: [
-        { TITLE: '官方主页', URL: '/#home' },
-        { TITLE: '操作文档', URL: 'https://docs.tangly1024.com/about' },
+        { TITLE: '官方主頁', URL: '/#home' },
+        { TITLE: '操作文檔', URL: 'https://docs.tangly1024.com/about' },
         {
-          TITLE: '帮助支持',
+          TITLE: '幫助支持',
           URL: 'https://docs.tangly1024.com/article/how-to-question'
         },
         {
-          TITLE: '合作申请',
+          TITLE: '合作申請',
           URL: 'https://docs.tangly1024.com/article/my-service'
         }
       ]
@@ -320,25 +326,25 @@ const CONFIG = {
           URL: 'https://docs.tangly1024.com/article/vercel-deploy-notion-next'
         },
         {
-          TITLE: '升级指南',
+          TITLE: '升級指南',
           URL: 'https://docs.tangly1024.com/article/how-to-update-notionnext'
         },
         { TITLE: '最新版本', URL: 'https://docs.tangly1024.com/article/latest' }
       ]
     },
     {
-      TITLE: 'Notion写作',
+      TITLE: 'Notion寫作',
       LINK_GROUP: [
         {
-          TITLE: 'Notion开始写作',
+          TITLE: 'Notion開始寫作',
           URL: 'https://docs.tangly1024.com/article/start-to-write'
         },
         {
-          TITLE: '快捷键提升效率',
+          TITLE: '快捷鍵提升效率',
           URL: 'https://docs.tangly1024.com/article/notion-short-key'
         },
         {
-          TITLE: '中国大陆使用Notion',
+          TITLE: '中國大陸使用Notion',
           URL: 'https://docs.tangly1024.com/article/notion-faster'
         }
       ]
@@ -347,39 +353,35 @@ const CONFIG = {
 
   STARTER_FOOTER_BLOG_LATEST_TITLE: '最新文章',
 
-  STARTER_FOOTER_PRIVACY_POLICY_TEXT: '隐私政策',
+  STARTER_FOOTER_PRIVACY_POLICY_TEXT: '隱私政策',
   STARTER_FOOTER_PRIVACY_POLICY_URL: '/privacy-policy',
 
-  STARTER_FOOTER_PRIVACY_LEGAL_NOTICE_TEXT: '法律声明',
+  STARTER_FOOTER_PRIVACY_LEGAL_NOTICE_TEXT: '法律聲明',
   STARTER_FOOTER_PRIVACY_LEGAL_NOTICE_URL: '/legacy-notice',
 
-  STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_TEXT: '服务协议',
+  STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_TEXT: '服務協議',
   STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_URL: '/terms-of-use',
 
-  // 404页面的提示语
-  STARTER_404_TITLE: '我们似乎找不到您要找的页面。',
-  STARTER_404_TEXT: '抱歉！您要查找的页面不存在。可能已经移动或删除。',
-  STARTER_404_BACK: '回到主页',
+  // 404頁面的提示語
+  STARTER_404_TITLE: '我們似乎找不到您要找的頁面。',
+  STARTER_404_TEXT: '抱歉！您要查找的頁面不存在。可能已經移動或刪除。',
+  STARTER_404_BACK: '回到主頁',
 
-  // 页面底部的行动呼吁模块
-  STARTER_CTA_ENABLE: true,
-  STARTER_CTA_TITLE: '你还在等待什么呢？',
-  STARTER_CTA_TITLE_2: '现在开始吧',
+  // 頁面底部的行動呼籲模塊
+  STARTER_CTA_ENABLE: false,
+  STARTER_CTA_TITLE: '你還在等待什麼呢？',
+  STARTER_CTA_TITLE_2: '現在開始吧',
   STARTER_CTA_DESCRIPTION:
-    '访问NotionNext的操作文档，我们提供了详细的教程，帮助你即刻搭建站点',
-  STARTER_CTA_BUTTON: true, // 是否显示按钮
+    '訪問NotionNext的操作文檔，我們提供了詳細的教程，幫助你即刻搭建站點',
+  STARTER_CTA_BUTTON: true, // 是否顯示按鈕
   STARTER_CTA_BUTTON_URL:
     'https://docs.tangly1024.com/article/vercel-deploy-notion-next',
-  STARTER_CTA_BUTTON_TEXT: '开始体验',
+  STARTER_CTA_BUTTON_TEXT: '開始體驗',
 
   STARTER_POST_REDIRECT_ENABLE: true, // 默認開啟重定向
-  STARTER_POST_REDIRECT_URL: 'https://blog.tangly1024.com', // 重定向域名
-  STARTER_NEWSLETTER: process.env.NEXT_PUBLIC_THEME_STARTER_NEWSLETTER || false, // 是否开启邮件订阅 请先配置mailchimp功能 https://docs.tangly1024.com/article/notion-next-mailchimp
+  STARTER_POST_REDIRECT_URL: 'https://www.chiya.com.tw', // 重定向域名
+  STARTER_NEWSLETTER: process.env.NEXT_PUBLIC_THEME_STARTER_NEWSLETTER || false, // 是否開啟郵件訂閱 請先配置mailchimp功能 https://docs.tangly1024.com/article/notion-next-mailchimp
 
-  // Hero背景相關配置
-  STARTER_HERO_BACKGROUND_ENABLE: true, // 是否啟用背景圖
-  STARTER_HERO_BACKGROUND_IMAGE: '', // 自定義背景圖，留空則使用Notion封面圖
-  STARTER_HERO_BACKGROUND_OPACITY: 0.7, // 背景圖透明度
-  STARTER_HERO_BACKGROUND_FIXED: false, // 背景圖是否固定
+
 }
 export default CONFIG
