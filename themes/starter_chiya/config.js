@@ -77,7 +77,7 @@ const CONFIG = {
   STARTER_FEATURE_ENABLE: true, // 特性區塊開關
   STARTER_FEATURE_TITLE: '啟雅工程企業股份有限公司', // 特性
   STARTER_FEATURE_TEXT_1: '主要服務項目', // 特性
-  STARTER_FEATURE_TEXT_2: '以深耕行業超過30年的經驗，為您解決問題。 ', // 特性
+  STARTER_FEATURE_TEXT_2: '以深耕行業超過30年的經驗為您解決問題。 ', // 特性
 
   STARTER_FEATURE_1_TITLE_1: '水刀清洗', // 特性1
   STARTER_FEATURE_1_TEXT_1: '項目細節說明', // 特性1說明
@@ -287,7 +287,7 @@ const CONFIG = {
   STARTER_CONTACT_EMAIL_TEXT: 'chiya.n20218@msa.hinet.net',
 
   // 嵌入外部表單
-  STARTER_CONTACT_MSG_EXTERNAL_URL: 'https://noteforms.com/forms/yfctc7', // 基於NoteForm創建，將留言數據存在Notion中
+  STARTER_CONTACT_MSG_EXTERNAL_URL: 'https://noteforms.com/forms/kkf9ng', // 基於NoteForm創建，將留言數據存在Notion中
   //   自定義留言表單，以下幾個配置暫時廢棄
   //   STARTER_CONTACT_MSG_TITLE: '向我們留言',
   //   STARTER_CONTACT_MSG_NAME: '姓名',
@@ -299,7 +299,7 @@ const CONFIG = {
 
 
 
-  STARTER_FOOTER_SLOGAN: '我們通過技術為品牌和公司創造數字體驗。',
+  STARTER_FOOTER_SLOGAN: '以深耕行業超過30年的經驗為您解決問題。',
 
   // 頁腳三列菜單組
   STARTER_FOOTER_LINK_GROUP: [
