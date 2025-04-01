@@ -271,11 +271,10 @@ const CONFIG = {
 
   // 博客文章區塊
   STARTER_BLOG_ENABLE: true, // 首頁博文區塊開關
-  STARTER_BLOG_TITLE: '我們的博客',
+  STARTER_BLOG_TITLE: '文章彙整',
   STARTER_BLOG_COUNT: 3, // 首頁博文區塊默認展示前3篇文章
   STARTER_BLOG_TEXT_1: '最近的新聞',
-  STARTER_BLOG_TEXT_2:
-    '這裡會發布一些關於NotionNext的最新動態，包括新的動向、新的未來計劃，以及新功能的特性',
+  STARTER_BLOG_TEXT_2: '這裡會發布一些最新動態',
 
   // 聯繫模塊
   STARTER_CONTACT_ENABLE: true, // 聯繫模塊開關
