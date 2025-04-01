@@ -21,12 +21,20 @@ export const Footer = props => {
           <div className='-mx-4 flex flex-wrap'>
             <div className='w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12'>
               <div className='mb-10 w-full'>
-                <a className='-mx-4 mb-6 inline-block max-w-[160px]'>
+                {/* -mt-6來調整logo位置*/}
+                <a className='-mx-4 -mt-7 mb-2 inline-block max-w-[160px]'>
                   <Logo white={true} />
                 </a>
-                <p className='mb-8 max-w-[270px] text-base text-gray-7'>
+                <p className='mb-3 max-w-[270px] text-lg font-semibold text-gray-7'>
                   {siteConfig('STARTER_FOOTER_SLOGAN')}
                 </p>
+                <div className='mb-6'>
+                  {siteConfig('STARTER_FOOTER_CONTACT_INFO', []).map((info, index) => (
+                    <p key={index} className='text-base text-gray-7'>
+                      {info}
+                    </p>
+                  ))}
+                </div>
                 <div className='-mx-3 flex items-center'>
                   <div className='mx-3'>
                     <SocialButton />

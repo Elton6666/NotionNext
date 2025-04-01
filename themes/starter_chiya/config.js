@@ -298,7 +298,14 @@ const CONFIG = {
 
 
 
-  STARTER_FOOTER_SLOGAN: '以深耕行業超過30年的經驗為您解決問題。',
+  STARTER_FOOTER_SLOGAN: '啟雅工程企業股份有限公司',
+
+  STARTER_FOOTER_CONTACT_INFO: [
+    '高雄市林園區半部路92巷30號',
+    '電話：07-6428290',
+    '雲林縣麥寮鄉海豐村平和60之52',
+    '電話：05-6937784'
+  ],
 
   // 頁腳三列菜單組
   STARTER_FOOTER_LINK_GROUP: [
