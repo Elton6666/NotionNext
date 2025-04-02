@@ -308,7 +308,7 @@ const CONFIG = {
   STARTER_CONTACT_EMAIL_TEXT: 'chiya.n20218@msa.hinet.net',
 
   // 嵌入外部表單
-  STARTER_CONTACT_MSG_EXTERNAL_URL: 'https://noteforms.com/forms/kkf9ng', // 基於NoteForm創建，將留言數據存在Notion中
+  STARTER_CONTACT_MSG_EXTERNAL_URL: 'https://noteforms.com/forms/9pimno', // 基於NoteForm創建，將留言數據存在Notion中
   // endregion
   
   // =============== 行動呼籲區塊 ===============
