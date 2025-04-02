@@ -90,22 +90,22 @@ const CONFIG = {
   STARTER_FEATURE_1_TITLE_1: '水刀清洗', // 特性1
   STARTER_FEATURE_1_TEXT_1: '項目細節說明', // 特性1說明
   STARTER_FEATURE_1_BUTTON_TEXT: '瞭解更多', // 特性1按鈕
-  STARTER_FEATURE_1_BUTTON_URL: 'https://github.com/tangly1024/NotionNext', // 特性1連結
+  STARTER_FEATURE_1_BUTTON_URL: '/ServiceOffering1', // 特性1連結
 
   STARTER_FEATURE_2_TITLE_1: '水刀切割', // 特性2
   STARTER_FEATURE_2_TEXT_1: '項目細節說明', // 特性2說明
   STARTER_FEATURE_2_BUTTON_TEXT: '瞭解更多', // 特性2按鈕
-  STARTER_FEATURE_2_BUTTON_URL: 'https://docs.tangly1024.com/article/notion-next-themes', // 特性2連結
+  STARTER_FEATURE_2_BUTTON_URL: '/ServiceOffering2', // 特性2連結
 
   STARTER_FEATURE_3_TITLE_1: '免入槽水刀清洗', // 特性3
   STARTER_FEATURE_3_TEXT_1: '項目細節說明', // 特性3說明
   STARTER_FEATURE_3_BUTTON_TEXT: '瞭解更多', // 特性3按鈕
-  STARTER_FEATURE_3_BUTTON_URL: 'https://docs.tangly1024.com/article/next-js', // 特性3連結
+  STARTER_FEATURE_3_BUTTON_URL: '/ServiceOffering3', // 特性3連結
 
   STARTER_FEATURE_4_TITLE_1: '換熱器整修', // 特性4
   STARTER_FEATURE_4_TEXT_1: '項目細節說明', // 特性4說明
   STARTER_FEATURE_4_BUTTON_TEXT: '瞭解更多', // 特性4按鈕
-  STARTER_FEATURE_4_BUTTON_URL: 'https://docs.tangly1024.com/about', // 特性4連結
+  STARTER_FEATURE_4_BUTTON_URL: '/ServiceOffering4', // 特性4連結
   // endregion
 
   // =============== 關於我們區塊 ===============
@@ -350,16 +350,10 @@ const CONFIG = {
     {
       TITLE: '主要服務項目',
       LINK_GROUP: [
-        { TITLE: '水刀清洗', URL: '/#home' },
-        { TITLE: '水刀切割', URL: 'https://docs.tangly1024.com/about' },
-        {
-          TITLE: '免入槽水刀清洗',
-          URL: 'https://docs.tangly1024.com/article/how-to-question'
-        },
-        {
-          TITLE: '換熱器整修',
-          URL: 'https://docs.tangly1024.com/article/my-service'
-        }
+        { TITLE: '水刀清洗', URL: '/ServiceOffering1' },
+        { TITLE: '水刀切割', URL: '/ServiceOffering2' },
+        { TITLE: '免入槽水刀清洗', URL: '/ServiceOffering3'},
+        { TITLE: '換熱器整修', URL: '/ServiceOffering4'}
       ]
     }
   ],
