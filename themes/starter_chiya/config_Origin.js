@@ -301,7 +301,25 @@ const CONFIG = {
   
     STARTER_FOOTER_SLOGAN: '我们通过技术为品牌和公司创造数字体验。',
   
-    // 页脚三列菜单组
+    // 聯絡資訊，段落可自由添加
+    STARTER_FOOTER_CONTACT_INFO: [
+      '高雄市林園區半部路92巷30號',
+      '電話：07-6428290',
+      '雲林縣麥寮鄉海豐村平和60之52',
+      '電話：05-6937784'
+    ],
+  
+    /* 頁腳菜單組，可自由添加項目，
+    增加項目複製
+        {
+        TITLE: '主要服務項目',
+        LINK_GROUP: [
+          {TITLE: '頁面標題', URL: '/頁面連結'}
+        ]
+      }
+    增加頁面連結複製{TITLE: '頁面標題', URL: '/頁面連結'}
+    增加外部連結複製{TITLE: '外部連結', URL: '外部連結'}
+    */
     STARTER_FOOTER_LINK_GROUP: [
       {
         TITLE: '关于我们',
@@ -315,37 +333,6 @@ const CONFIG = {
           {
             TITLE: '合作申请',
             URL: 'https://docs.tangly1024.com/article/my-service'
-          }
-        ]
-      },
-      {
-        TITLE: '功能特性',
-        LINK_GROUP: [
-          {
-            TITLE: '部署指南',
-            URL: 'https://docs.tangly1024.com/article/vercel-deploy-notion-next'
-          },
-          {
-            TITLE: '升级指南',
-            URL: 'https://docs.tangly1024.com/article/how-to-update-notionnext'
-          },
-          { TITLE: '最新版本', URL: 'https://docs.tangly1024.com/article/latest' }
-        ]
-      },
-      {
-        TITLE: 'Notion写作',
-        LINK_GROUP: [
-          {
-            TITLE: 'Notion开始写作',
-            URL: 'https://docs.tangly1024.com/article/start-to-write'
-          },
-          {
-            TITLE: '快捷键提升效率',
-            URL: 'https://docs.tangly1024.com/article/notion-short-key'
-          },
-          {
-            TITLE: '中国大陆使用Notion',
-            URL: 'https://docs.tangly1024.com/article/notion-faster'
           }
         ]
       }

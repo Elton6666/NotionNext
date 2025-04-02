@@ -1,6 +1,8 @@
 /**
- * 另一個落地頁主題
+ * Starter 主題配置文件
  */
+
+// =============== 基礎配置區塊 ===============
 const CONFIG = {
   // 默認只展示Logo文字，如果設置了logo圖片，會在文字左側顯示圖標
   STARTER_LOGO: '/images/starter_chiya/logo/ChiyaLogo.png', // 普通logo圖片 示例：/images/starter/logo/logo.svg
@@ -8,8 +10,19 @@ const CONFIG = {
 
   // MENU ， 菜單部分不在此處配置，請在Notion數據庫中添加MENU
 
-  // 英雄區塊導航
+  // =============== 導航區塊 ===============
+  STARTER_NAV_BUTTONS_ENABLE: false, // 控制是否顯示登錄/註冊按鈕
+  // region 區塊內容
+  STARTER_NAV_BUTTON_1_TEXT: 'Sign In',
+  STARTER_NAV_BUTTON_1_URL: '/sign-in',
+
+  STARTER_NAV_BUTTON_2_TEXT: 'Sign Up',
+  STARTER_NAV_BUTTON_2_URL: '/sign-up',
+  // endregion
+
+  // =============== 英雄區塊 ===============
   STARTER_HERO_ENABLE: true, // 開啟英雄區
+  // region 區塊內容
   // Hero背景相關配置
   STARTER_HERO_BACKGROUND_ENABLE: true, // 是否啟用背景圖
   STARTER_HERO_BACKGROUND_IMAGE: '', // 自定義背景圖，留空則使用Notion封面圖
@@ -20,8 +33,7 @@ const CONFIG = {
   STARTER_HERO_TITLE_2: '', // 英雄區副標題
   // 英雄區兩個按鈕，如果TEXT留空則隱藏按鈕
   STARTER_HERO_BUTTON_1_TEXT: '', // 英雄區按鈕
-  STARTER_HERO_BUTTON_1_URL:
-    'https://docs.tangly1024.com/article/vercel-deploy-notion-next', // 英雄區按鈕
+  STARTER_HERO_BUTTON_1_URL: 'https://docs.tangly1024.com/article/vercel-deploy-notion-next', // 英雄區按鈕
   STARTER_HERO_BUTTON_2_TEXT: '', // 英雄區按鈕
   STARTER_HERO_BUTTON_2_URL: 'https://github.com/tangly1024/NotionNext', // 英雄區按鈕
   STARTER_HERO_BUTTON_2_ICON: '/images/starter_chiya/github.svg', // 英雄區按鈕2的圖標，不需要則留空
@@ -29,17 +41,11 @@ const CONFIG = {
   // 英雄區配圖，如需隱藏，改為空值即可 ''
   STARTER_HERO_PREVIEW_IMAGE: '', // 產品預覽圖 ，默認讀取public目錄下圖片
   STARTER_HERO_BANNER_IMAGE: '', // hero區下方的全寬圖
+  // endregion
 
-  // 頂部右側導航暗流
-  STARTER_NAV_BUTTONS_ENABLE: false, // 控制是否顯示登錄/註冊按鈕
-  STARTER_NAV_BUTTON_1_TEXT: 'Sign In',
-  STARTER_NAV_BUTTON_1_URL: '/sign-in',
-
-  STARTER_NAV_BUTTON_2_TEXT: 'Sign Up',
-  STARTER_NAV_BUTTON_2_URL: '/sign-up',
-
-  // 合作伙伴的圖標
+  // =============== 品牌合作區塊 ===============
   STARTER_BRANDS_ENABLE: false, // 合作伙伴開關
+  // region 區塊內容
   STARTER_BRANDS: [
     {
       IMAGE: '/images/starter/brands/graygrids.svg',
@@ -72,9 +78,11 @@ const CONFIG = {
       TITLE: 'tailgrids'
     }
   ],
+  // endregion
 
-  // 特性區塊
+  // =============== 服務特性區塊 ===============
   STARTER_FEATURE_ENABLE: true, // 特性區塊開關
+  // region 區塊內容
   STARTER_FEATURE_TITLE: '啟雅工程企業股份有限公司', // 特性
   STARTER_FEATURE_TEXT_1: '主要服務項目', // 特性
   STARTER_FEATURE_TEXT_2: '以深耕行業超過30年的經驗為您解決問題。 ', // 特性
@@ -98,22 +106,26 @@ const CONFIG = {
   STARTER_FEATURE_4_TEXT_1: '項目細節說明', // 特性4說明
   STARTER_FEATURE_4_BUTTON_TEXT: '瞭解更多', // 特性4按鈕
   STARTER_FEATURE_4_BUTTON_URL: 'https://docs.tangly1024.com/about', // 特性4連結
+  // endregion
 
-  // 首頁ABOUT區塊
+  // =============== 關於我們區塊 ===============
   STARTER_ABOUT_ENABLE: true, // ABOUT區塊開關
+  // region 區塊內容
   STARTER_ABOUT_TITLE: '關於我們',
   STARTER_ABOUT_TEXT:
     '我們是一家成立超過30年的水刀工程公司，專注於設備管路的清洗和不動火切割，服務項目涵蓋換熱器維護相關工程，如現場法蘭修復及管束抽裝等。 <br /> <br />我們提供卓越的技術和豐富的經驗，為客戶提供全方位的解決方案。',
   STARTER_ABOUT_BUTTON_TEXT: '瞭解更多',
-  STARTER_ABOUT_BUTTON_URL: 'https://docs.tangly1024.com/about',
+  STARTER_ABOUT_BUTTON_URL: '/about',
   STARTER_ABOUT_IMAGE_1: '/images/starter/about/about-image-01.jpg',
   STARTER_ABOUT_IMAGE_2: '/images/starter/about/about-image-02.jpg',
   STARTER_ABOUT_TIPS_1: '7000+',
   STARTER_ABOUT_TIPS_2: '博客站點',
   STARTER_ABOUT_TIPS_3: '正在線上運行',
+  // endregion
 
-  // 首頁價格區塊
+  // =============== 價格方案區塊 ===============
   STARTER_PRICING_ENABLE: false, // 價格區塊開關
+  // region 區塊內容
   STARTER_PRICING_TITLE: '價格表',
   STARTER_PRICING_TEXT_1: '很棒的定價計劃',
   STARTER_PRICING_TEXT_2:
@@ -149,9 +161,11 @@ const CONFIG = {
   STARTER_PRICING_3_BUTTON_TEXT: '立即購買',
   STARTER_PRICING_3_BUTTON_URL:
     'https://tangly1024.lemonsqueezy.com/checkout/buy/df924d66-09dc-42a4-a632-a6b0c5cc4f28',
+  // endregion
 
-  // 首頁用戶測評區塊
+  // =============== 用戶評價區塊 ===============
   STARTER_TESTIMONIALS_ENABLE: false, // 測評區塊開關
+  // region 區塊內容
   STARTER_TESTIMONIALS_TITLE: '用戶反饋',
   STARTER_TESTIMONIALS_TEXT_1: '我們的用戶怎麼說',
   STARTER_TESTIMONIALS_TEXT_2:
@@ -214,9 +228,11 @@ const CONFIG = {
       STARTER_TESTIMONIALS_ITEM_URL: 'https://www.lucenczz.top/'
     }
   ],
+  // endregion
 
-  //   FAQ 常見問題模塊
+  // =============== FAQ常見問題區塊 ===============
   STARTER_FAQ_ENABLE: true, // 常見問題模塊開關
+  // region 區塊內容
   STARTER_FAQ_TITLE: '常見問題解答',
   STARTER_FAQ_TEXT_1: '有任何問題嗎？請看這裡',
   STARTER_FAQ_TEXT_2: '我們收集了常見的用戶疑問',
@@ -236,9 +252,11 @@ const CONFIG = {
   STARTER_FAQ_4_QUESTION: '問題4',
   STARTER_FAQ_4_ANSWER:
     '問題解答(HTML格式)',
+  // endregion
 
-  // 團隊成員區塊
+  // =============== 團隊成員區塊 ===============
   STARTER_TEAM_ENABLE: false, // 團隊成員區塊開關
+  // region 區塊內容
   STARTER_TEAM_TITLE: '團隊成員',
   STARTER_TEAM_TEXT_1: '我們的開發者團隊',
   STARTER_TEAM_TEXT_2:
@@ -268,16 +286,20 @@ const CONFIG = {
       STARTER_TEAM_ITEM_DESCRIPTION: 'Creative Designer'
     }
   ],
+  // endregion
 
-  // 博客文章區塊
+  // =============== 文章區塊 ===============
   STARTER_BLOG_ENABLE: true, // 首頁博文區塊開關
+  // region 區塊內容
   STARTER_BLOG_TITLE: '文章彙整',
   STARTER_BLOG_COUNT: 3, // 首頁博文區塊默認展示前3篇文章
   STARTER_BLOG_TEXT_1: '最近的新聞',
   STARTER_BLOG_TEXT_2: '這裡會發布一些最新動態',
+  // endregion
 
-  // 聯繫模塊
+  // =============== 聯繫我們區塊 ===============
   STARTER_CONTACT_ENABLE: true, // 聯繫模塊開關
+  // region 區塊內容
   STARTER_CONTACT_TITLE: '聯繫我們',
   STARTER_CONTACT_TEXT: '告訴我們您遇到的問題',
   STARTER_CONTACT_LOCATION_TITLE: '我們的位置',
@@ -287,19 +309,25 @@ const CONFIG = {
 
   // 嵌入外部表單
   STARTER_CONTACT_MSG_EXTERNAL_URL: 'https://noteforms.com/forms/kkf9ng', // 基於NoteForm創建，將留言數據存在Notion中
-  //   自定義留言表單，以下幾個配置暫時廢棄
-  //   STARTER_CONTACT_MSG_TITLE: '向我們留言',
-  //   STARTER_CONTACT_MSG_NAME: '姓名',
-  //   STARTER_CONTACT_MSG_EMAIL: '郵箱地址',
-  //   STARTER_CONTACT_MSG_PHONE: '聯繫電話',
-  //   STARTER_CONTACT_MSG_TEXT: '消息內容',
-  //   STARTER_CONTACT_MSG_SEND: '發送消息',
-  //   STARTER_CONTACT_MSG_THANKS: '感謝您的留言',
+  // endregion
+  
+  // =============== 行動呼籲區塊 ===============
+  STARTER_CTA_ENABLE: false,
+  // region 區塊內容
+  STARTER_CTA_TITLE: '你還在等待什麼呢？',
+  STARTER_CTA_TITLE_2: '現在開始吧',
+  STARTER_CTA_DESCRIPTION:
+    '訪問NotionNext的操作文檔，我們提供了詳細的教程，幫助你即刻搭建站點',
+  STARTER_CTA_BUTTON: true, // 是否顯示按鈕
+  STARTER_CTA_BUTTON_URL:
+    'https://docs.tangly1024.com/article/vercel-deploy-notion-next',
+  STARTER_CTA_BUTTON_TEXT: '開始體驗',
+  // endregion
 
-
-
+  // =============== 頁尾區塊 ===============
+  // region 區塊內容
   STARTER_FOOTER_SLOGAN: '啟雅工程企業股份有限公司',
-
+  // 聯絡資訊，段落可自由添加
   STARTER_FOOTER_CONTACT_INFO: [
     '高雄市林園區半部路92巷30號',
     '電話：07-6428290',
@@ -307,51 +335,30 @@ const CONFIG = {
     '電話：05-6937784'
   ],
 
-  // 頁腳三列菜單組
+  /* 頁腳菜單組，可自由添加項目，
+  增加項目複製
+      {
+      TITLE: '主要服務項目',
+      LINK_GROUP: [
+        {TITLE: '頁面標題', URL: '/頁面連結'}
+      ]
+    }
+  增加頁面連結複製{TITLE: '頁面標題', URL: '/頁面連結'}
+  增加外部連結複製{TITLE: '外部連結', URL: '外部連結'}
+  */
   STARTER_FOOTER_LINK_GROUP: [
     {
-      TITLE: '關於我們',
+      TITLE: '主要服務項目',
       LINK_GROUP: [
-        { TITLE: '官方主頁', URL: '/#home' },
-        { TITLE: '操作文檔', URL: 'https://docs.tangly1024.com/about' },
+        { TITLE: '水刀清洗', URL: '/#home' },
+        { TITLE: '水刀切割', URL: 'https://docs.tangly1024.com/about' },
         {
-          TITLE: '幫助支持',
+          TITLE: '免入槽水刀清洗',
           URL: 'https://docs.tangly1024.com/article/how-to-question'
         },
         {
-          TITLE: '合作申請',
+          TITLE: '換熱器整修',
           URL: 'https://docs.tangly1024.com/article/my-service'
-        }
-      ]
-    },
-    {
-      TITLE: '功能特性',
-      LINK_GROUP: [
-        {
-          TITLE: '部署指南',
-          URL: 'https://docs.tangly1024.com/article/vercel-deploy-notion-next'
-        },
-        {
-          TITLE: '升級指南',
-          URL: 'https://docs.tangly1024.com/article/how-to-update-notionnext'
-        },
-        { TITLE: '最新版本', URL: 'https://docs.tangly1024.com/article/latest' }
-      ]
-    },
-    {
-      TITLE: 'Notion寫作',
-      LINK_GROUP: [
-        {
-          TITLE: 'Notion開始寫作',
-          URL: 'https://docs.tangly1024.com/article/start-to-write'
-        },
-        {
-          TITLE: '快捷鍵提升效率',
-          URL: 'https://docs.tangly1024.com/article/notion-short-key'
-        },
-        {
-          TITLE: '中國大陸使用Notion',
-          URL: 'https://docs.tangly1024.com/article/notion-faster'
         }
       ]
     }
@@ -367,27 +374,22 @@ const CONFIG = {
 
   STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_TEXT: '服務協議',
   STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_URL: '/terms-of-use',
+  // endregion
 
+  // =============== 錯誤頁面區塊 ===============
+  // region 區塊內容
   // 404頁面的提示語
   STARTER_404_TITLE: '我們似乎找不到您要找的頁面。',
   STARTER_404_TEXT: '抱歉！您要查找的頁面不存在。可能已經移動或刪除。',
   STARTER_404_BACK: '回到主頁',
+  // endregion
 
-  // 頁面底部的行動呼籲模塊
-  STARTER_CTA_ENABLE: false,
-  STARTER_CTA_TITLE: '你還在等待什麼呢？',
-  STARTER_CTA_TITLE_2: '現在開始吧',
-  STARTER_CTA_DESCRIPTION:
-    '訪問NotionNext的操作文檔，我們提供了詳細的教程，幫助你即刻搭建站點',
-  STARTER_CTA_BUTTON: true, // 是否顯示按鈕
-  STARTER_CTA_BUTTON_URL:
-    'https://docs.tangly1024.com/article/vercel-deploy-notion-next',
-  STARTER_CTA_BUTTON_TEXT: '開始體驗',
-
+  // =============== 其他功能區塊 ===============
+  // region 區塊內容
   STARTER_POST_REDIRECT_ENABLE: true, // 默認開啟重定向
   STARTER_POST_REDIRECT_URL: 'https://www.chiya.com.tw', // 重定向域名
   STARTER_NEWSLETTER: process.env.NEXT_PUBLIC_THEME_STARTER_NEWSLETTER || false, // 是否開啟郵件訂閱 請先配置mailchimp功能 https://docs.tangly1024.com/article/notion-next-mailchimp
-
-
+  // endregion
 }
+
 export default CONFIG
