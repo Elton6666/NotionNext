@@ -245,7 +245,7 @@ const CONFIG = {
   STARTER_FAQ_2_ANSWER:
     '問題解答(HTML格式)',
 
-  STARTER_FAQ_3_QUESTION: '壓力這麼大會不會搞壞設備?',
+  STARTER_FAQ_3_QUESTION: '水刀會打壞設備嗎?',
   STARTER_FAQ_3_ANSWER:
     '問題解答(HTML格式)',
 
